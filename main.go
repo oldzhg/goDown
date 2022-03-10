@@ -1,9 +1,9 @@
 package main
 
 import (
+	"./utils"
 	"flag"
 	"fmt"
-	"goDown/utils"
 	"log"
 	"os"
 )
