@@ -19,7 +19,7 @@ func (f fileInfo) Run(thread int) error {
 		} else {
 			jobs[i].Start = jobs[i-1].End + 1
 		}
-		if i < thread - 1 {
+		if i < thread-1 {
 			jobs[i].End = jobs[i].Start + eachSize
 		} else {
 			jobs[i].End = f.Size - 1

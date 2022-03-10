@@ -16,7 +16,7 @@ var (
 	threadNum int
 )
 
-func init()  {
+func init() {
 	flag.BoolVar(&h, "h", false, "this help")
 	flag.BoolVar(&v, "v", false, "show version and exit")
 	flag.StringVar(&url, "url", "", "下载链接")
@@ -31,7 +31,7 @@ Usage: goDown [-hv] [-url URL] [-t thred] [-sha256]
 Options:
 `)
 	if err != nil {
-		return 
+		return
 	}
 	flag.PrintDefaults()
 	os.Exit(0)
@@ -48,7 +48,7 @@ func main() {
 	}
 	url := url
 	md5 := md5
-	if url == ""{
+	if url == "" {
 		log.Println("请输入合法的下载链接！")
 		return
 	}
